@@ -41,53 +41,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include('templates/header.php'); ?>
-<section class="container grey-text">
-  <h5 class="center">ADD A PIZZA!</h5>
-  <div class="error-message center">
-          <?php echo $errors['form']; ?>
-      </div>
-  <div class="card">
-    <form
-      action="add.php"
-      method="POST"
-    >
-      <label for="email">Your email:</label>
-      <div class="error-message">
-          <?php echo $errors['email']; ?>
-      </div>
-      <input 
-        type="text" 
-        title="email" 
-        value="<?php echo htmlspecialchars($email) ?>"
+<main>
+  <section class="container grey-text">
+    <h5 class="center">ADD A PIZZA!</h5>
+    <div class="error-message center">
+            <?php echo $errors['form']; ?>
+        </div>
+    <div class="card">
+      <form
+        action="add.php"
+        method="POST"
       >
-      <label for="pizza title">Pizza title:</label>
-      <div class="error-message">
-          <?php echo $errors['title']; ?>
-      </div>
-      <input 
-        type="text" 
-        title="title" 
-        value="<?php echo htmlspecialchars($title) ?>"
-      >
-      <label for="ingredients">Ingredients (comma separated):</label>
-      <div class="error-message">
-          <?php echo $errors['ingredients']; ?>
-      </div>
-      <input 
-        type="text" 
-        title="ingredients" 
-        value="<?php echo htmlspecialchars($ingredients) ?>"
-      >
-      <div class="center">
+        <label for="email">Your email:</label>
+        <div class="error-message">
+            <?php echo $errors['email']; ?>
+        </div>
         <input 
-          type="submit" 
-          title="submit" 
-          value="submit" 
-          class="btn brand submit z-depth-0"
+          type="text" 
+          title="email" 
+          value="<?php echo htmlspecialchars($email) ?>"
         >
-      </div>
-    </form>
-  </div>
-</section>
+        <label for="pizza title">Pizza title:</label>
+        <div class="error-message">
+            <?php echo $errors['title']; ?>
+        </div>
+        <input 
+          type="text" 
+          title="title" 
+          value="<?php echo htmlspecialchars($title) ?>"
+        >
+        <label for="ingredients">Ingredients (comma separated):</label>
+        <div class="error-message">
+            <?php echo $errors['ingredients']; ?>
+        </div>
+        <input 
+          type="text" 
+          title="ingredients" 
+          value="<?php echo htmlspecialchars($ingredients) ?>"
+        >
+        <div class="center">
+          <input 
+            type="submit" 
+            title="submit" 
+            value="submit" 
+            class="btn brand submit z-depth-0"
+          >
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
 <?php include('templates/footer.php'); ?>
 </html>
