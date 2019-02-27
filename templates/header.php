@@ -25,9 +25,7 @@
   <title>PIXELPIZZA</title>
 </head>
   <body>
-    <nav 
-      id="navbar"
-    >
+    <nav id="nav-wrapper">
       <div class="container">
         <a
           href="index.php"
