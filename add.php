@@ -34,7 +34,7 @@
   if (array_filter($errors)) {
     $errors['form'] = 'There are errors in the form!';
   } else {
-    //    header('Location: index.php');
+    // header('Location: index.php');
   }
 ?>
 
@@ -52,33 +52,39 @@
         action="add.php"
         method="POST"
       >
+      <div>
         <label for="email">Your email:</label>
         <div class="error-message">
             <?php echo $errors['email']; ?>
         </div>
         <input 
           type="text" 
-          title="email" 
+          title="email"
           value="<?php echo htmlspecialchars($email) ?>"
         >
+      </div>
+      <div>
         <label for="pizza title">Pizza title:</label>
         <div class="error-message">
             <?php echo $errors['title']; ?>
         </div>
         <input 
           type="text" 
-          title="title" 
+          title="title"
           value="<?php echo htmlspecialchars($title) ?>"
         >
+      </div>
+      <div>
         <label for="ingredients">Ingredients (comma separated):</label>
         <div class="error-message">
             <?php echo $errors['ingredients']; ?>
         </div>
         <input 
           type="text" 
-          title="ingredients" 
+          title="ingredients"
           value="<?php echo htmlspecialchars($ingredients) ?>"
         >
+      </div>
         <div class="center">
           <input 
             type="submit" 

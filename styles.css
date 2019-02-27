@@ -27,6 +27,10 @@ main {
   background: #ee6e73 !important;
 }
 
+.brand:hover {
+  background: #F29599 !important;
+}
+
 .card {
   max-width: 400px;
   margin: 20px auto;
@@ -63,6 +67,11 @@ main {
 
 #ingredients-list {
   margin-top: 10px;
+}
+
+input:focus {
+  border-bottom: 1px solid #ee6e73 !important;
+  box-shadow: 0 1px 0 0 #ee6e73 !important;
 }
 
 .page-footer {
