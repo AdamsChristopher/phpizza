@@ -34,7 +34,12 @@
                 </div>
               </div>
               <div class="card-action center-align">
-                <a href="#" class="brand-text">More info</a>
+                <a
+                href="#"
+                class="btn brand z-depth-0"
+                >
+                 More info
+                </a>
               </div>
             </div>
           </div>
