@@ -1,4 +1,6 @@
 <?php
+  include('config/db_connect.php');
+
   $email = ''; 
   $title = ''; 
   $ingredients = '';
@@ -6,7 +8,7 @@
 
   if (isset($_POST['submit'])) {
     if (empty($_POST['email'])) {
-      $errors['email'] = 'An email is required </br>';
+      $errors['email'] = 'An email is required';
     } else {
       $email = $_POST['email'];
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -14,7 +16,7 @@
       }
     }
     if (empty($_POST['title'])) {
-      $errors['title'] = 'An title is required </br>';
+      $errors['title'] = 'An title is required';
     } else {
       $title = $_POST['title'];
       if (!preg_match('/^[a-zA-z\s]+$/', $title)) {
@@ -22,19 +24,26 @@
       }
     }
     if (empty($_POST['ingredients'])) {
-      $errors['ingredients'] = 'Ingredients must be separated by commas </br>';
+      $errors['ingredients'] = 'At least one ingredient is required';
     } else {
       $ingredients = $_POST['ingredients'];
       if (!preg_match('/^([a-zA-z\s]+)(,\s*[[a-zA-z]*)*$/', $ingredients)) {
         $errors['ingredients'] = 'Ingredients must be separated by commas';
       }
     }
-  }
-
-  if (array_filter($errors)) {
-    $errors['form'] = 'There are errors in the form!';
-  } else {
-    // header('Location: index.php');
+    if (array_filter($errors)) {
+    } else {
+      $email = mysqli_real_escape_string($connection, $_POST['email']);
+      $title = mysqli_real_escape_string($connection, $_POST['title']);
+      $ingredients = mysqli_real_escape_string($connection, $_POST['ingredients']);
+      $sql = "INSERT INTO pizza (email, title, ingredients) VALUES ('$email', '$title', '$ingredients')";
+  
+      if (mysqli_query($connection, $sql)) {
+        header('Location: index.php');
+      } else {
+        echo 'query error:' . mysqli_error($connection);
+      }
+    }
   }
 ?>
 
