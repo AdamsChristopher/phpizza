@@ -28,7 +28,7 @@
     <nav id="nav-wrapper">
       <div class="container">
         <a
-          href="index.php"
+          href="#"
           class="brand-logo brand-text center"
         >
           <span class="fas fa-pizza-slice"></span> PIXELPIZZA
@@ -39,10 +39,10 @@
         >
           <li>
             <a
-              href="add.php"
+              href=<?php echo ($_SERVER['PHP_SELF'] === '/phpizza/index.php' ? '/phpizza/add.php' : '/phpizza/index.php'); ?>
               class="btn brand z-depth-0"
             >
-              Add a pizza
+              <?php echo ($_SERVER['PHP_SELF'] === '/phpizza/add.php' ? 'Homepage' : 'Add a pizza'); ?>
             </a>
           </li>
         </ul>

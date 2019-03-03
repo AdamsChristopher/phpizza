@@ -25,6 +25,8 @@ main {
   color: #171717;
   font-weight: bold;
   background: #ee6e73 !important;
+  width: 160px;
+  height: 36px;
 }
 
 .brand:hover {
