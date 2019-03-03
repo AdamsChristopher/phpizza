@@ -28,10 +28,10 @@
     <nav id="nav-wrapper">
       <div class="container">
         <a
-          href="index.php"
+          href="#"
           class="brand-logo brand-text center"
         >
-          <span class="fas fa-pizza-slice"></span> PIXELPIZZA
+          PIXELPIZZA
         </a>
         <ul
           id="nav-mobile"
@@ -39,10 +39,10 @@
         >
           <li>
             <a
-              href=<?php echo ($_SERVER['PHP_SELF'] === '/phpizza/index.php' ? '/phpizza/add.php' : '/phpizza/index.php'); ?>
+              href=<?php echo ($_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? '/phpizza/index.php' : '/phpizza/add.php'); ?>
               class="btn brand z-depth-0"
             >
-              <?php echo ($_SERVER['PHP_SELF'] === '/phpizza/add.php' ? 'Homepage' : 'Add a Pizza'); ?>
+              <?php echo ($_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? 'Homepage' : 'Add a Pizza'); ?>
             </a>
           </li>
         </ul>

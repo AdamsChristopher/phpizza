@@ -4,6 +4,7 @@
   $sql = 'SELECT title, ingredients, id FROM pizza ORDER BY created_at';
   $results = mysqli_query($connection, $sql);
   $pizzas = mysqli_fetch_all($results, MYSQLI_ASSOC);
+
   mysqli_free_result($results);
   mysqli_close($connection);
 ?>
@@ -12,8 +13,8 @@
 <html lang="en">
   <?php include('templates/header.php'); ?>
   <main> 
-    <h4 class="center grey-text">PIZZAS!</h4>
-    <div class="container">
+    <h5 class="center grey-text">PIZZAS!</h5>
+    <section class="container">
       <div class="row">
         <?php foreach ($pizzas as $pizza): ?>
             <div class="col s12 md3 l4">
@@ -36,7 +37,7 @@
                 </div>
                 <div class="card-action center-align">
                   <a
-                  href="#"
+                  href="info.php?id=<?php echo $pizza['id']; ?>"
                   class="btn brand z-depth-0"
                   >
                     More info
@@ -46,7 +47,7 @@
             </div>
           <?php endforeach; ?>
       </div>
-    </div>
+    </section>
   </main> 
   <?php include('templates/footer.php'); ?>
 </html>
