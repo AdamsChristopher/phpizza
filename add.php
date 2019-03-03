@@ -1,9 +1,7 @@
 <?php
   include('config/db_connect.php');
 
-  $email = ''; 
-  $title = ''; 
-  $ingredients = '';
+  $email = $title = $ingredients = '';
   $errors = array('email' => '', 'title' => '', 'ingredients' => '', 'form' => '');
 
   if (isset($_POST['submit'])) {
@@ -41,7 +39,7 @@
       if (mysqli_query($connection, $sql)) {
         header('Location: index.php');
       } else {
-        echo 'query error:' . mysqli_error($connection);
+        echo 'query error: ' . mysqli_error($connection);
       }
     }
   }
@@ -66,9 +64,10 @@
         <div class="error-message">
             <?php echo $errors['email']; ?>
         </div>
-        <input 
-          type="text" 
+        <input
+          type="text"
           title="email"
+          name="email"
           value="<?php echo htmlspecialchars($email) ?>"
         >
       </div>
@@ -78,8 +77,9 @@
             <?php echo $errors['title']; ?>
         </div>
         <input 
-          type="text" 
+          type="text"
           title="title"
+          name="title"
           value="<?php echo htmlspecialchars($title) ?>"
         >
       </div>
@@ -88,17 +88,19 @@
         <div class="error-message">
             <?php echo $errors['ingredients']; ?>
         </div>
-        <input 
-          type="text" 
+        <input
+          type="text"
           title="ingredients"
+          name="ingredients"
           value="<?php echo htmlspecialchars($ingredients) ?>"
         >
       </div>
         <div class="center">
-          <input 
-            type="submit" 
-            title="submit" 
-            value="submit" 
+          <input
+            type="submit"
+            title="submit"
+            name="submit"
+            value="submit"
             class="btn brand submit z-depth-0"
           >
         </div>

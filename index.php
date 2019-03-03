@@ -45,15 +45,8 @@
               </div>
             </div>
           <?php endforeach; ?>
-          <?php if (count($pizzas) >= 2): ?>
-            <p class="center">There are two or more pizzas</p>
-          <?php  else: ?>
-            <p class="center">There are less than two pizzas</p>
-          <?php endif ?>
       </div>
     </div>
   </main> 
   <?php include('templates/footer.php'); ?>
-<body>
-</body>
 </html>
