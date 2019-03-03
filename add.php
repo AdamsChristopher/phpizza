@@ -17,7 +17,7 @@
       $errors['title'] = 'An title is required';
     } else {
       $title = $_POST['title'];
-      if (!preg_match('/^[a-zA-z\s]+$/', $title)) {
+      if (!preg_match('/^[\w\'\s]+$/', $title)) {
         $errors['title'] = 'title must be letters and spaces only';
       }
     }
@@ -25,7 +25,7 @@
       $errors['ingredients'] = 'At least one ingredient is required';
     } else {
       $ingredients = $_POST['ingredients'];
-      if (!preg_match('/^([a-zA-z\s]+)(,\s*[[a-zA-z]*)*$/', $ingredients)) {
+      if (!preg_match('/^([\w\s]+)(,\s*[[\w]*)*$/', $ingredients)) {
         $errors['ingredients'] = 'Ingredients must be separated by commas';
       }
     }
