@@ -11,7 +11,7 @@
     mysqli_close($connection);
   }
 
-  if (isset($_GET['delete'])) {
+  if (isset($_POST['delete'])) {
     $id_to_delete = mysqli_real_escape_string($connection, $_POST['id_to_delete']);
     $sql = "DELETE FROM pizza WHERE id = $id_to_delete";
 
