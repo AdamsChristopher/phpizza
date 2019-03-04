@@ -39,10 +39,10 @@
         >
           <li>
             <a
-              href=<?php echo ($_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? '/phpizza/index.php' : '/phpizza/add.php'); ?>
+              href=<?php echo $_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? '/phpizza/index.php' : '/phpizza/add.php'; ?>
               class="btn brand z-depth-0"
             >
-              <?php echo ($_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? 'Homepage' : 'Add a Pizza'); ?>
+              <?php echo $_SERVER['PHP_SELF'] !== '/phpizza/index.php' ? 'Homepage' : 'Add a Pizza'; ?>
             </a>
           </li>
         </ul>
