@@ -16,22 +16,22 @@
     <h5 class="center grey-text">PIZZAS!</h5>
     <section class="container">
       <div class="row">
-        <?php foreach ($pizzas as $pizza): ?>
+        <?php foreach ($pizzas as $pizza) { ?>
             <div class="col s12 md3 l4">
               <div class="card">
-                <div class="card-content center">
-                  <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])) ?></h5>
                   <i 
                     id="pizza-picture"
                     class="fas fa-pizza-slice fa-10x"
                   >
                   </i>
+                <div class="card-content center">
+                  <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])) ?></h5>
                   <h6 id="ingredients-title">Ingredients:</h6>
                   <div>
                     <ul id="ingredients-list">
-                      <?php foreach (explode(',', $pizza['ingredients']) as $ingredient): ?>
+                      <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) { ?>
                         <li><?php echo htmlspecialchars(ucwords($ingredient)) ?></li>
-                      <?php endforeach; ?>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
                 </div>
               </div>
             </div>
-          <?php endforeach; ?>
+         <?php } ?>
       </div>
     </section>
   </main> 

@@ -29,14 +29,14 @@
     <main>
       <section class="container center">
         <div class="card">
+          <i 
+            id="pizza-picture"
+            class="fas fa-pizza-slice fa-10x"
+          >
+          </i>
           <div class="card-content center">
             <?php if ($pizza) : ?>
             <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])); ?></h5>
-            <i 
-              id="pizza-picture"
-              class="fas fa-pizza-slice fa-10x"
-            >
-            </i>
             <h6 id="ingredients-title">Ingredients:</h6>
               <div>
                 <ul id="ingredients-list">

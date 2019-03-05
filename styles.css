@@ -35,7 +35,7 @@ main {
 
 .card {
   max-width: 400px;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px;
   border-radius: 6px;
 }
@@ -52,13 +52,18 @@ main {
   padding: 0 !important;
 }
 
+#pizza-picture {
+  color: #ee6e73;
+  text-align: center;
+  display: block;
+  margin-bottom: -30px;
+  position: relative;
+  top: -42px;
+}
+
 #pizza-title {
   color: #ee6e73;
   margin-bottom: 20px;
-}
-
-#pizza-picture {
-  color: #ee6e73;
 }
 
 #ingredients-title {
