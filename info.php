@@ -35,7 +35,7 @@
           >
           </i>
           <div class="card-content center">
-            <?php if ($pizza) : ?>
+            <?php if ($pizza) { ?>
             <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])); ?></h5>
             <h6 id="ingredients-title">Ingredients:</h6>
               <div>
@@ -69,9 +69,9 @@
               </form>
             </div>
           </div>
-            <?php else : ?>
+            <?php } else { ?>
             <h5>404 Not Found.</h5>
-            <?php endif ?>
+            <?php } ?>
           </div>
         </div>
       </section>
