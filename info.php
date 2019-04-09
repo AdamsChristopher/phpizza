@@ -31,12 +31,17 @@
         <div class="card">
           <i 
             id="pizza-picture"
-            class="fas fa-pizza-slice fa-10x"
+            class="fas fa-pizza-slice fa-10x text-center"
           >
           </i>
           <div class="card-content text-center">
             <?php if ($pizza) { ?>
-            <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])); ?></h5>
+            <h5 
+              id="pizza-title"
+              class="mb-3"
+            >
+              <?php echo htmlspecialchars(strtoupper($pizza['title'])); ?>
+            </h5>
             <h6 id="ingredients-title">Ingredients:</h6>
               <div class="text-center">
                 <ul 

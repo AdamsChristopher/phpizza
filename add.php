@@ -49,13 +49,14 @@
 <html lang="en">
 <?php include('templates/header.php'); ?>
 <main>
-  <section class="container grey-text">
-    <h5 class="center">ADD A PIZZA!</h5>
+  <section class="container">
+    <h3 class="text-center m-3">ADD A PIZZA!</h3>
     <div class="error-message center">
             <?php echo $errors['form']; ?>
         </div>
     <div class="card">
       <form
+        class="form-group"
         action="add.php"
         method="POST"
       >
@@ -65,6 +66,7 @@
             <?php echo $errors['email']; ?>
         </div>
         <input
+          class="form-control mb-2"
           type="text"
           title="email"
           name="email"
@@ -77,6 +79,7 @@
             <?php echo $errors['title']; ?>
         </div>
         <input 
+          class="form-control mb-2"
           type="text"
           title="title"
           name="title"
@@ -89,19 +92,20 @@
             <?php echo $errors['ingredients']; ?>
         </div>
         <input
+          class="form-control mb-2"
           type="text"
           title="ingredients"
           name="ingredients"
           value="<?php echo htmlspecialchars($ingredients) ?>"
         >
       </div>
-        <div class="center">
+        <div class="d-flex justify-content-center">
           <input
+            class="btn brand submit mt-3"
             type="submit"
             title="submit"
             name="submit"
             value="submit"
-            class="btn brand submit z-depth-0"
           >
         </div>
       </form>

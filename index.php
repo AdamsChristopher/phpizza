@@ -14,18 +14,23 @@
   <?php include('templates/header.php'); ?>
   <main> 
     <section class="container">
-      <h5 class="text-center m-2">PIZZAS!</h5>
+      <h3 class="text-center m-3">PIZZAS!</h3>
       <div class="row">
         <?php foreach ($pizzas as $pizza) { ?>
-            <div class="col-12 col-md-3 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-3">
               <div class="card">
                   <i 
                     id="pizza-picture"
-                    class="fas fa-pizza-slice fa-10x"
+                    class="fas fa-pizza-slice fa-10x text-center"
                   >
                   </i>
                 <div class="card-content text-center">
-                  <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])) ?></h5>
+                  <h5 
+                    id="pizza-title"
+                    class="mb-3"
+                  >
+                    <?php echo htmlspecialchars(strtoupper($pizza['title'])) ?>
+                  </h5>
                   <h6 id="ingredients-title">Ingredients:</h6>
                   <div class="text-center">
                     <ul
