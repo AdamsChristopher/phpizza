@@ -27,19 +27,22 @@
 <html lang="en">
   <?php include('templates/header.php'); ?>
     <main>
-      <section class="container center">
+      <section class="container">
         <div class="card">
           <i 
             id="pizza-picture"
             class="fas fa-pizza-slice fa-10x"
           >
           </i>
-          <div class="card-content center">
+          <div class="card-content text-center">
             <?php if ($pizza) { ?>
             <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])); ?></h5>
             <h6 id="ingredients-title">Ingredients:</h6>
-              <div>
-                <ul id="ingredients-list">
+              <div class="text-center">
+                <ul 
+                  id="ingredients-list"
+                  class="px-0"
+                >
                   <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) { ?>
                     <li><?php echo htmlspecialchars(ucwords($ingredient)) ?></li>
                   <?php } ?>
@@ -50,7 +53,7 @@
                 <p><?php echo $pizza['created_at']; ?></p>
               </div>
             </div>
-            <div class="card-action center-align">
+            <div class="text-center">
               <form
                 action="info.php"
                 method="POST"
@@ -61,7 +64,7 @@
                   value="<?php echo $pizza['id']; ?>"
                 >
                 <input
-                  class="btn brand z-depth-0"
+                  class="btn brand"
                   type="submit"
                   name="delete"
                   value="Delete"
