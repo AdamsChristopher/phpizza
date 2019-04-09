@@ -1,4 +1,4 @@
-  <footer class="page-footer">
+  <footer id="page-footer">
     <div class="text-center">Copyright 2019 PIXELPIZZA</div>
   </footer>
   <script 

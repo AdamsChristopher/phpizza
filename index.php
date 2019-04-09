@@ -38,7 +38,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="card-action mx-auto">
+                <div class="mx-auto">
                   <a
                   href="info.php?id=<?php echo $pizza['id']; ?>"
                   class="btn brand"
