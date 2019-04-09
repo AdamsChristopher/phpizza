@@ -74,6 +74,7 @@ main {
 
 #ingredients-list {
   margin-top: 10px;
+  list-style-type: none;
 }
 
 #pizza-details {

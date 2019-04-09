@@ -13,32 +13,35 @@
 <html lang="en">
   <?php include('templates/header.php'); ?>
   <main> 
-    <h5 class="center grey-text">PIZZAS!</h5>
     <section class="container">
+      <h5 class="text-center m-2">PIZZAS!</h5>
       <div class="row">
         <?php foreach ($pizzas as $pizza) { ?>
-            <div class="col s12 md3 l4">
+            <div class="col-12 col-md-3 col-lg-4">
               <div class="card">
                   <i 
                     id="pizza-picture"
                     class="fas fa-pizza-slice fa-10x"
                   >
                   </i>
-                <div class="card-content center">
+                <div class="card-content text-center">
                   <h5 id="pizza-title"><?php echo htmlspecialchars(strtoupper($pizza['title'])) ?></h5>
                   <h6 id="ingredients-title">Ingredients:</h6>
-                  <div>
-                    <ul id="ingredients-list">
+                  <div class="text-center">
+                    <ul
+                      id="ingredients-list"
+                      class="px-0"
+                    >
                       <?php foreach (explode(',', $pizza['ingredients']) as $ingredient) { ?>
                         <li><?php echo htmlspecialchars(ucwords($ingredient)) ?></li>
                       <?php } ?>
                     </ul>
                   </div>
                 </div>
-                <div class="card-action center-align">
+                <div class="card-action mx-auto">
                   <a
                   href="info.php?id=<?php echo $pizza['id']; ?>"
-                  class="btn brand z-depth-0"
+                  class="btn brand"
                   >
                     More info
                   </a>

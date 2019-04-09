@@ -1,5 +1,5 @@
   <footer class="page-footer">
-    <div class="center">Copyright 2019 PIXELPIZZA</div>
+    <div class="text-center">Copyright 2019 PIXELPIZZA</div>
   </footer>
   <script 
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
