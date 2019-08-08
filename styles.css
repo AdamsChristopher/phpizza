@@ -1,42 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab');
 
-#nav-wrapper {
-  background: #ffffff;
-}
-
 body {
   font-family: 'Roboto Slab', monospace, Verdana, sans-serif;
-  background: #eeeeee;
+  color: #ffffff;
+  background: #424250;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
 .navbar {
-  box-shadow: 0px 0px 8px #888888;
+  background: #33333d !important;
+  /* box-shadow: 0 0 8px #888888; */
+}
+
+.navbar-light .navbar-brand {
+  color: #ffffff;
 }
 
 main {
+  margin-top: 4rem;
   flex: 1 0 auto;
 }
 
-.brand-text {
-  color: #ee6e73 !important;
-  font-weight: bold;
-}
-
 .brand {
-  color: #171717;
+  color: #33333d;
   font-weight: bold;
-  background: #ee6e73 !important;
+  background: #ff4181 !important;
   width: 160px;
 }
 
 .brand:hover {
-  background: #F29599 !important;
+  background: #f29599 !important;
 }
 
 .card {
+  color: #ffffff;
+  background: #33333d;
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -48,18 +48,18 @@ main {
 }
 
 #pizza-picture {
-  color: #ee6e73;
+  color: #ff4181;
   margin-bottom: -30px;
   position: relative;
   top: -42px;
 }
 
 #pizza-title {
-  color: #ee6e73;
+  color: #ff4181;
 }
 
 #ingredients-title {
-  color: #ee6e73;
+  color: #ff4181;
 }
 
 #ingredients-list {
@@ -68,8 +68,8 @@ main {
 }
 
 input:focus {
-  border: 1px solid #ee6e73 !important;
-  box-shadow: 0 0 4px 1px #ee6e73 !important;
+  border: 1px solid #ff4181 !important;
+  box-shadow: 0 0 4px 1px #ff4181 !important;
 }
 
 #page-footer {
